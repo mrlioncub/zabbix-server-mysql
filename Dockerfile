@@ -16,6 +16,6 @@ RUN set -x \
   && apk add --allow-untrusted msodbcsql17_17.5.2.2-1_amd64.apk \
   && apk add --allow-untrusted mssql-tools_17.5.2.1-1_amd64.apk \
   && rm -rf $tempDir \
-  && rm -rf /var/cache/apk/* \
+  && rm -rf /var/cache/apk/*
 
 USER 1997
