@@ -71,3 +71,11 @@ Result:
 +---------------------------------------+
 SQL>
 ```
+
+## SQL query
+Create login & grant permission for zabbix:
+```sql
+CREATE LOGIN zabbixlogin WITH PASSWORD='*Password*';
+GRANT VIEW SERVER STATE TO zabbixlogin;
+GRANT VIEW ANY DEFINITION TO zabbixlogin;
+```
