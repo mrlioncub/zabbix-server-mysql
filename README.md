@@ -21,7 +21,7 @@ Result:
 ```
 [ODBC Driver 17 for SQL Server]
 Description=Microsoft ODBC Driver 17 for SQL Server
-Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.2
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.6.so.1.1
 UsageCount=1
 ```
  3. Create odbc.ini:
