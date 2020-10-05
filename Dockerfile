@@ -1,4 +1,4 @@
-FROM zabbix/zabbix-server-mysql:alpine-5.0.3
+FROM zabbix/zabbix-server-mysql:alpine-5.0.5
 
 LABEL maintainer="mr.lioncub" \
       release-date="2020–08–16" \
