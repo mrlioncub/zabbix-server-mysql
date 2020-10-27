@@ -1,7 +1,6 @@
-FROM zabbix/zabbix-server-mysql:alpine-5.0.4
+FROM zabbix/zabbix-server-mysql:alpine-5.0.5
 
 LABEL maintainer="mr.lioncub" \
-      release-date="2020–08–16" \
       link1="https://github.com/zabbix/zabbix-docker/tree/5.0/server-mysql/alpine" \
       link2="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server"
 
