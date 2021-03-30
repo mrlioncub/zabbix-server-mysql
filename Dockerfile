@@ -1,4 +1,4 @@
-FROM zabbix/zabbix-server-mysql:alpine-5.0.9
+FROM zabbix/zabbix-server-mysql:alpine-5.0.10
 
 LABEL maintainer="mr.lioncub" \
       link1="https://github.com/zabbix/zabbix-docker/tree/5.0/server-mysql/alpine" \
@@ -10,9 +10,9 @@ RUN set -x \
   && tempDir="$(mktemp -d)" \
   && chown nobody:nobody $tempDir \
   && cd $tempDir \
-  && wget "https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.1.1-1_amd64.apk" \
+  && wget "https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.7.2.1-1_amd64.apk" \
   && wget "https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.7.1.1-1_amd64.apk" \
-  && apk add --allow-untrusted msodbcsql17_17.7.1.1-1_amd64.apk \
+  && apk add --allow-untrusted msodbcsql17_17.7.2.1-1_amd64.apk \
   && apk add --allow-untrusted mssql-tools_17.7.1.1-1_amd64.apk \
   && apk add coreutils \
   && rm -rf $tempDir \
