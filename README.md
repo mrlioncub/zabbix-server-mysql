@@ -8,27 +8,27 @@ Zabbix server uses MySQL database with Microsoft ODBC driver for SQL Server on A
 ## Uses
 
   * Official docker image Zabbix server (MySQL) 5.0
-  * Microsoft ODBC driver for SQL Server 17
+  * Microsoft ODBC driver for SQL Server 18
 
 ## Test
 
  1. Run Zabbix Server with this image idscan/zabbix-server-mysql
  2. Check ODBC Driver:
 ```bash
-docker exec _container_name_ odbcinst -q -d -n "ODBC Driver 17 for SQL Server"
+docker exec _container_name_ odbcinst -q -d -n "ODBC Driver 18 for SQL Server"
 ```
 Result:
 ```
-[ODBC Driver 17 for SQL Server]
-Description=Microsoft ODBC Driver 17 for SQL Server
-Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.6.so.1.1
+[ODBC Driver 18 for SQL Server]
+Description=Microsoft ODBC Driver 18 for SQL Server
+Driver=/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.1.so.1.1
 UsageCount=1
 ```
  3. Create odbc.ini:
 ```
 [mssql-test]
 Description = MS SQL test
-Driver = ODBC Driver 17 for SQL Server
+Driver = ODBC Driver 18 for SQL Server
 Server = tcp:192.168.100.100,1433
 ```
  4. [Mount](https://docs.docker.com/storage/bind-mounts/) our odbc.ini in docker _container_name_ (recreate container with -v|--mount or with volume in compose):
