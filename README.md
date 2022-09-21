@@ -30,6 +30,7 @@ UsageCount=1
 Description = MS SQL test
 Driver = ODBC Driver 18 for SQL Server
 Server = tcp:192.168.100.100,1433
+TrustServerCertificate = Yes
 ```
  4. [Mount](https://docs.docker.com/storage/bind-mounts/) our odbc.ini in docker _container_name_ (recreate container with -v|--mount or with volume in compose):
 ```
