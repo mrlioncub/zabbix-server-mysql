@@ -21,7 +21,7 @@ Result:
 ```
 [ODBC Driver 18 for SQL Server]
 Description=Microsoft ODBC Driver 18 for SQL Server
-Driver=/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.1.so.2.1
+Driver=/opt/microsoft/msodbcsql18/lib64/libmsodbcsql-18.1.so.1.1
 UsageCount=1
 ```
  3. Create odbc.ini:
