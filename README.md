@@ -83,6 +83,7 @@ GRANT VIEW ANY DEFINITION TO zabbixlogin;
 permission for the "Get job status" item :
 ```sql
 USE [msdb]
+CREATE USER zabbixlogin FOR LOGIN zabbixlogin
 GRANT EXECUTE ON [dbo].agent_datetime TO [zabbixlogin]
 ALTER ROLE db_datareader ADD MEMBER [zabbixlogin];
 ```
