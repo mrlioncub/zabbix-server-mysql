@@ -80,3 +80,9 @@ CREATE LOGIN zabbixlogin WITH PASSWORD='*Password*';
 GRANT VIEW SERVER STATE TO zabbixlogin;
 GRANT VIEW ANY DEFINITION TO zabbixlogin;
 ```
+permission for the "Get job status" item :
+```sql
+USE [msdb]
+GRANT EXECUTE ON [dbo].agent_datetime TO [zabbixlogin]
+ALTER ROLE db_datareader ADD MEMBER [zabbixlogin];
+```
