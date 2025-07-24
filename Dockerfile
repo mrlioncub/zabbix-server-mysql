@@ -1,7 +1,7 @@
-FROM zabbix/zabbix-server-mysql:alpine-7.0.16
+FROM zabbix/zabbix-server-mysql:alpine-7.0.17
 
 LABEL maintainer="mr.lioncub" \
-      link1="https://github.com/zabbix/zabbix-docker/tree/6.0/server-mysql/alpine" \
+      link1="https://github.com/zabbix/zabbix-docker/tree/7.0" \
       link2="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server"
 
 USER root
